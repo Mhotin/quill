@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 export function absoluteUrl(path: string) {
-  if (typeof window !== 'undefined') return path
+  // if (typeof window !== 'undefined') return path
   if (process.env.VERCEL_URL)
     return `https://${process.env.VERCEL_URL}${path}`
   return `http://localhost:${
@@ -15,9 +15,15 @@ export function absoluteUrl(path: string) {
   }${path}`
 }
 
+// export function generateViewport({}) {
+//   return {
+//     themeColor: '#FFF',
+//   }
+// }
+
 export function constructMetadata({
-  title = "Quill - the SaaS for students",
-  description = "Quill is an open-source software to make chatting to your PDF files easy.",
+  title = "Priby",
+  description = "Priby is a PDF-based Chatbot system that helps students to have an effective learning experience.",
   image = "/thumbnail.png",
   icons = "/favicon.ico",
   noIndex = false
@@ -45,11 +51,10 @@ export function constructMetadata({
       title,
       description,
       images: [image],
-      creator: "@joshtriedcoding"
+      creator: "@princesimons"
     },
     icons,
     metadataBase: new URL('https://quill-jet.vercel.app'),
-    themeColor: '#FFF',
     ...(noIndex && {
       robots: {
         index: false,

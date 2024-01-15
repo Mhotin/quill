@@ -39,6 +39,7 @@ const UserAccountNav = async ({
                 <Image
                   fill
                   src={imageUrl}
+                  sizes='auto'
                   alt='profile picture'
                   referrerPolicy='no-referrer'
                 />
