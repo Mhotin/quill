@@ -45,7 +45,7 @@ const Dashboard = ({subscriptionPlan}: PageProps) => {
   return (
     <main className='mx-auto max-w-7xl md:p-10'>
       <div className='mt-8 flex flex-col items-start justify-between gap-4 border-b border-gray-200 pb-5 sm:flex-row sm:items-center sm:gap-0'>
-        <h1 className='mb-3 font-bold text-5xl text-gray-900'>
+        <h1 className='mb-3 font-bold text-5xl text-white'>
           My Files
         </h1>
 
@@ -80,7 +80,7 @@ const Dashboard = ({subscriptionPlan}: PageProps) => {
                   </div>
                 </Link>
 
-                <div className='px-6 mt-4 grid grid-cols-3 place-items-center py-2 gap-6 text-xs text-zinc-500'>
+                <div className='px-6 mt-4 grid grid-cols-3 place-items-center py-2 gap-6 text-xs text-zinc-900'>
                   <div className='flex items-center gap-2'>
                     <Plus className='h-4 w-4' />
                     {format(
@@ -115,7 +115,7 @@ const Dashboard = ({subscriptionPlan}: PageProps) => {
         <Skeleton height={100} className='my-2' count={3} />
       ) : (
         <div className='mt-16 flex flex-col items-center gap-2'>
-          <Ghost className='h-8 w-8 text-zinc-800' />
+          <Ghost className='h-8 w-8 text-zinc-100' />
           <h3 className='font-semibold text-xl'>
             Pretty empty around here
           </h3>
